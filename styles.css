@@ -1,8 +1,8 @@
 :root {
-    --intro-email-background): hsl(217, 28%, 15%);
-    --main-background): hsl(218, 28%, 13%);
-    --footer-background): hsl(216, 53%, 9%);
-    --testimonials-background): hsl(219, 30%, 18%);
+    --intro-email-background: hsl(217, 28%, 15%);
+    --main-background: hsl(218, 28%, 13%);
+    --footer-background: hsl(216, 53%, 9%);
+    --testimonials-background: hsl(219, 30%, 18%);
     --cyan: hsl(176, 68%, 64%);
     --blue: hsl(198, 60%, 50%);
     --lightRed: hsl(0, 100%, 63%);
@@ -10,9 +10,111 @@
 }
 
 * {
-    margin: 0
+    margin: 0;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    
+    background-color: var(--main-background);
+    padding: 1.75rem;
 }
+
+nav ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 74px;
+}
+
+.nav-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-item {
+    color: var(--white);
+}
+
+h1, h2, h3, h4, p {
+    font-family: 'Raleway', sans-serif;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.125rem;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+header {
+    text-align: center;
+}
+
+.hero-img {
+    width: 100%
+}
+
+.bg-wave {
+    width: 100%
+}
+
+.value-props-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 1rem;
+    place-items: center;
+}
+
+.value-prop {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 24rem;
+}
+
+.value-prop p {
+    text-wrap: balance;
+}
+
+
+
+.quote-card {
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    background-color: var(--testimonials-background);
+}
+
+
+.quote-card .avatar-img {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.avatar-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (min-width: 600px) {
+    .value-props-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
